@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearchTree", "Recursi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList", "Recursive\LinkedList\LinkedList.csproj", "{80428BDB-436A-4A40-B0DC-5C9185AC8B2B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NonRecursive_LinkedList", "Non-Recursive\LinkedList\NonRecursive_LinkedList.csproj", "{36E47063-E0EF-4032-9E54-C889E878E07D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{80428BDB-436A-4A40-B0DC-5C9185AC8B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80428BDB-436A-4A40-B0DC-5C9185AC8B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80428BDB-436A-4A40-B0DC-5C9185AC8B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36E47063-E0EF-4032-9E54-C889E878E07D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36E47063-E0EF-4032-9E54-C889E878E07D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36E47063-E0EF-4032-9E54-C889E878E07D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36E47063-E0EF-4032-9E54-C889E878E07D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{1E2FE254-A324-4F03-82BF-600E634F5918} = {39C112BB-1329-496F-895E-E470F35954FA}
 		{9B5D865A-F74E-4C16-954F-1E5D1DCD21CB} = {97DDD34C-1188-4708-A97A-CE9BAB779A49}
 		{80428BDB-436A-4A40-B0DC-5C9185AC8B2B} = {97DDD34C-1188-4708-A97A-CE9BAB779A49}
+		{36E47063-E0EF-4032-9E54-C889E878E07D} = {39C112BB-1329-496F-895E-E470F35954FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {512575C0-CAB3-4FED-9236-2BB41B69C3BC}
