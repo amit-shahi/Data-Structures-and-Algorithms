@@ -17,7 +17,35 @@ namespace NonRecursive_LinkedList
 
     class Program
     {
-        public static Node insert(Node head, int data)
+        public static Node insertAtBeginning(Node head, int data)
+        {
+            //NOTE:
+            // Check if head pointer is null
+
+            if(head == null)
+            {
+                //NOTE:
+                // If head points to null, then create a new Node with passed in data
+
+                head = new Node(data);
+            }
+            else
+            {
+                // NOTE:
+                // If head doesn't point to null, then do following-
+                // 1. Create a temp node with passed in data
+                // 2. Point temp node's next pointer to head, Because old head node should then be next node of temp node
+                // 3. Make sure to assign newly created temp node to head node, so it's at the Beginning of the list
+
+                Node tempNode = new Node(data);
+                tempNode.next = head;
+                head = tempNode;
+            }
+
+            return head;
+        }
+
+        public static Node insertAtEnd(Node head, int data)
         {
             // NOTE:
             //If Head Node is NULL, Means there is no added item in the list.
@@ -81,19 +109,21 @@ namespace NonRecursive_LinkedList
 
             // Initially, Head Node Should Point to NULL 
             Node head = null;
-            
-            
+
+
+            head = insertAtBeginning(head, 1);
+
             // Insert new Node "2" at the end of List
-            head = insert(head, 2);
+            head = insertAtEnd(head, 2);
  
             //// Insert new Node "3" at the end of List
-            head = insert(head, 3);
+            head = insertAtEnd(head, 3);
 
             //// Insert new Node "4" at the end of List
-            head = insert(head, 4);
+            head = insertAtEnd(head, 4);
 
             //// Insert new Node "1" at the end of List
-            head = insert(head, 1);
+            head = insertAtEnd(head, 5);
 
             // Display All Nodes
 
