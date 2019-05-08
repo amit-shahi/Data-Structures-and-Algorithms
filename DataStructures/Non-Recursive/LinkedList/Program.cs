@@ -17,7 +17,7 @@ namespace NonRecursive_LinkedList
 
     class Program
     {
-        public static Node insertAtBeginning(Node head, int data)
+        public static Node InsertAtBeginning(Node head, int data)
         {
             //NOTE:
             // Check if head pointer is null
@@ -45,7 +45,7 @@ namespace NonRecursive_LinkedList
             return head;
         }
 
-        public static Node insertAtEnd(Node head, int data)
+        public static Node InsertAtEnd(Node head, int data)
         {
             // NOTE:
             //If Head Node is NULL, Means there is no added item in the list.
@@ -87,7 +87,7 @@ namespace NonRecursive_LinkedList
             return head;
         }
 
-        public static void display(Node head)
+        public static void DisplayAllNodes(Node head)
         {
             // NOTE:
             // Start of a Node should point to head Node
@@ -107,27 +107,28 @@ namespace NonRecursive_LinkedList
             WriteLine("Implementation of Linked List without Recursion");
             WriteLine("-----------------------------------------------");
 
-            // Initially, Head Node Should Point to NULL 
+            //// Initially, Head Node Should Point to NULL 
             Node head = null;
 
+            //// Insert new Node "1" at the beginning of List
 
-            head = insertAtBeginning(head, 1);
+            head = InsertAtBeginning(head, 1);
 
-            // Insert new Node "2" at the end of List
-            head = insertAtEnd(head, 2);
+            //// Insert new Node "2" at the end of List
+            head = InsertAtEnd(head, 2);
  
             //// Insert new Node "3" at the end of List
-            head = insertAtEnd(head, 3);
+            head = InsertAtEnd(head, 3);
 
             //// Insert new Node "4" at the end of List
-            head = insertAtEnd(head, 4);
+            head = InsertAtEnd(head, 4);
 
-            //// Insert new Node "1" at the end of List
-            head = insertAtEnd(head, 5);
+            //// Insert new Node "5" at the end of List
+            head = InsertAtEnd(head, 5);
 
-            // Display All Nodes
+            //// Display All Nodes
 
-            display(head);
+            DisplayAllNodes(head);
 
             WriteLine();
 
