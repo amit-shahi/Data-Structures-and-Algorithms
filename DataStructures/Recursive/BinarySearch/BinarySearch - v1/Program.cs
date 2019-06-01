@@ -22,14 +22,24 @@ namespace BinarySearch___v1
 
             int lookupInteger = _binarySearch.Search(integerList, 25);
 
-            foreach(int number in integerList)
+            WriteLine();
+
+            int index = 0;
+ 
+            WriteLine("Sorted Array List");
+
+            foreach (int number in integerList)
             {
-                Write(number + " ");
+                WriteLine("[" + index + "] => " + number + " ");
+                index++;
             }
 
-            if(lookupInteger != -1)
+            WriteLine();
+            WriteLine();
+
+            if (lookupInteger != -1)
             {
-                WriteLine($"Found {25} in the list at {lookupInteger}");
+                WriteLine($"Found {25} in the list at the position {lookupInteger}");
             }
             else
             {
