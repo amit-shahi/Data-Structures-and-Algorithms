@@ -11,7 +11,7 @@ namespace BinarySearch___v1
             WriteLine("Binary Search for an item in a sorted array list.");
             WriteLine();
 
-            WriteLine("1. Perform a Binary Search in a sorted list of integers.");
+            WriteLine("1. Perform a Recursive Binary Search in a sorted list of integers.");
 
             int[] integerList = new int[] { 1, 13, 40, 2, 5, 25, 44, 9, -1, 7, 6 };
 
@@ -54,7 +54,7 @@ namespace BinarySearch___v1
             WriteLine();
             WriteLine("***********************************************************************************");
             WriteLine();
-            WriteLine("2. Perform a Binary Search in a sorted list of strings.");
+            WriteLine("2. Perform a Recursive Binary Search in a sorted list of strings.");
 
             string[] stringList = new string[] { "One", "Apple", "Orange", "Mango", "Zebra", "Yummy" };
 
