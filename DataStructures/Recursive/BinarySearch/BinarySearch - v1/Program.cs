@@ -15,24 +15,29 @@ namespace BinarySearch___v1
 
             int[] integerList = new int[] { 1, 13, 40, 2, 5, 25, 44, 9, -1, 7, 6 };
 
-            BinarySearch<int> _binarySearch = new BinarySearch<int>();
+            BinarySearch<int> _integerBinarySearch = new BinarySearch<int>();
+
+            WriteLine();
+            WriteLine("Given Array List");
+            WriteLine(String.Join(" ", integerList));
 
             // Make sure to sort the given array of integers to make sure they are sorted.
             Array.Sort(integerList);
 
-            int lookupInteger = _binarySearch.Search(integerList, 25);
+            int lookupInteger = _integerBinarySearch.Search(integerList, 25);
+
+
 
             WriteLine();
-
-            int index = 0;
- 
             WriteLine("Sorted Array List");
+            WriteLine(String.Join(" ", integerList));
 
-            foreach (int number in integerList)
-            {
-                WriteLine("[" + index + "] => " + number + " ");
-                index++;
-            }
+            //int index = 0;
+            //foreach (int number in integerList)
+            //{
+            //    //WriteLine("[" + index + "] => " + number + " ");
+            //    index++;
+            //}
 
             WriteLine();
             WriteLine();
@@ -45,7 +50,50 @@ namespace BinarySearch___v1
             {
                 WriteLine("Item not found");
             }
-            
+
+            WriteLine();
+            WriteLine("***********************************************************************************");
+            WriteLine();
+            WriteLine("2. Perform a Binary Search in a sorted list of strings.");
+
+            string[] stringList = new string[] { "One", "Apple", "Orange", "Mango", "Zebra", "Yummy" };
+
+            BinarySearch<string> _stringBinarySearch = new BinarySearch<string>();
+
+            WriteLine();
+            WriteLine("Given Array List");
+            WriteLine(String.Join(" ", stringList));
+
+            // Make sure to sort the given array of integers to make sure they are sorted.
+            Array.Sort(stringList);
+
+            int lookupString = _stringBinarySearch.Search(stringList, "Mango");
+
+
+
+            WriteLine();
+            WriteLine("Sorted Array List");
+            WriteLine(String.Join(" ", stringList));
+
+            //int index = 0;
+            //foreach (int number in integerList)
+            //{
+            //    //WriteLine("[" + index + "] => " + number + " ");
+            //    index++;
+            //}
+
+            WriteLine();
+            //WriteLine("lookupString: " + lookupString);
+
+            if (lookupString != -1)
+            {
+                WriteLine($"Found Mango in the list at the position {lookupString}");
+            }
+            else
+            {
+                WriteLine("Item Mango not found");
+            }
+
 
         }
     }
