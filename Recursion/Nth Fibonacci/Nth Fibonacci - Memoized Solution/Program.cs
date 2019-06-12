@@ -1,26 +1,28 @@
 ﻿using System;
 using static System.Console;
 
-namespace Fibonacci_Recursive_Solution
+namespace Fibonacci_Memoized_Solution
 {
     class Program
     {
-        static int Find_Fibonacci(int position)
+        static int Find_Fibonacci(int position, int[] memo)
         {
-            int result = 0;
+            int result=0;
 
-            if (position <= 0)
-                result = 1;
-            else if (position == 1 || position == 2)
+            if(memo[position] != 0)
+                return memo[position];
+
+            if(position == 1 || position == 2)
                 result = 1;
             else
-                result = Find_Fibonacci(position - 1) + Find_Fibonacci(position - 2);
+            result = Find_Fibonacci(position-1, memo)+ Find_Fibonacci(position-2, memo);
+            memo[position] = result;
             return result;
         }
 
         static void Main(string[] args)
         {
-            WriteLine("Fibonacci Memoized (Caching) Solution - Dynamic Programming");
+            WriteLine("Fibonacci Memoized (Store) Solution - Dynamic Programming");
             WriteLine();
 
             WriteLine("The Fibonacci sequence is defined as follows: the first number of the sequence is 0, the second number is 1, and the nth number is the sum of the (n - 1)th and (n - 2)th numbers.");
@@ -32,7 +34,8 @@ namespace Fibonacci_Recursive_Solution
 
             int number = Convert.ToInt32(ReadLine());
 
-            long result = Find_Fibonacci(number);
+            int[] memo = new int[10];
+            long result = Find_Fibonacci(number, memo);
 
             WriteLine($"Fibonacci Number at position {number} is: {result}");
             ReadKey();
