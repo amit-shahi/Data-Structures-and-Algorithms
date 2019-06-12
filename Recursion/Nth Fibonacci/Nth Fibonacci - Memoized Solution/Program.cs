@@ -5,18 +5,22 @@ namespace Fibonacci_Memoized_Solution
 {
     class Program
     {
-        static int Find_Fibonacci(int position, int[] memo)
+        static int Find_Fibonacci(int n, int[] memo)
         {
             int result=0;
 
-            if(memo[position] != 0)
-                return memo[position];
+            if(memo[n] != 0)
+                return memo[n];
 
-            if(position == 1 || position == 2)
+            //if(n == 1 || n == 2)
+            //    result = 1;
+            if (n == 1)
+                result = 0;
+            else if (n == 2)
                 result = 1;
             else
-            result = Find_Fibonacci(position-1, memo)+ Find_Fibonacci(position-2, memo);
-            memo[position] = result;
+                result = Find_Fibonacci(n - 1, memo) + Find_Fibonacci(n - 2, memo);
+                memo[n] = result;
             return result;
         }
 

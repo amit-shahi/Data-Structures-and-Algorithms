@@ -5,24 +5,34 @@ namespace Fibonacci_Bottom_up_Solution
 {
     class Program
     {
-        static int Find_Fibonacci(int position, int[] memo)
+        static int Find_Fibonacci(int n)
         {
-            int result = 0;
+            int[] firstTwo = { 0, 1 };
+            int counter = 3;
 
-            if (memo[position] != 0)
-                return memo[position];
+            int nextFib;
 
-            if (position == 1 || position == 2)
-                result = 1;
+            if (n == 1)
+                return firstTwo[0];
             else
-                result = Find_Fibonacci(position - 1, memo) + Find_Fibonacci(position - 2, memo);
-            memo[position] = result;
-            return result;
+            {
+
+                while (counter <= n)
+                {
+                    nextFib = firstTwo[0] + firstTwo[1];
+                    firstTwo[0] = firstTwo[1];
+                    firstTwo[1] = nextFib;
+                    counter++;
+                }
+                return firstTwo[1];
+            }
+
+            
         }
 
         static void Main(string[] args)
         {
-            WriteLine("Fibonacci Memoized (Store) Solution - Dynamic Programming");
+            WriteLine("Fibonacci Bottom up (Iterative) Solution");
             WriteLine();
 
             WriteLine("The Fibonacci sequence is defined as follows: the first number of the sequence is 0, the second number is 1, and the nth number is the sum of the (n - 1)th and (n - 2)th numbers.");
@@ -34,8 +44,8 @@ namespace Fibonacci_Bottom_up_Solution
 
             int number = Convert.ToInt32(ReadLine());
 
-            int[] memo = new int[10];
-            long result = Find_Fibonacci(number, memo);
+            //int[] memo = new int[10];
+            long result = Find_Fibonacci(number);
 
             WriteLine($"Fibonacci Number at position {number} is: {result}");
             ReadKey();
