@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LinkedList
+namespace SinglyLinkedList
 {
 
     public class Node
@@ -40,10 +40,10 @@ namespace LinkedList
 
 
     }
-    public class LinkedList
+    public class SinglyLinkedList
     {
         public Node headNode;
-        public LinkedList()
+        public SinglyLinkedList()
         {
             headNode = null;
         }
@@ -88,10 +88,10 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Recursive Linked List");
+            Console.WriteLine("Recursive Singly Linked List");
             Console.WriteLine();
 
-            LinkedList node = new LinkedList();
+            SinglyLinkedList node = new SinglyLinkedList();
 
             node.AddToEnd(10);
             node.AddToEnd(20);
@@ -99,6 +99,8 @@ namespace LinkedList
 
             node.AddToBegining(1);
             node.AddToBegining(2);
+
+            node.AddToEnd(40);
 
             node.Print();
         }
