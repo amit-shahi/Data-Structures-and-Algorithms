@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace SinglyLinkedList
 {
@@ -18,11 +19,11 @@ namespace SinglyLinkedList
         public void Print()
         {
 
-            Console.Write("[" + data + "]  ->  ");
+            Write("[" + data + "]  ->  ");
             if (next != null)
                 next.Print();
             if(next == null)
-                Console.WriteLine("NULL");
+                WriteLine("NULL");
         }
 
         public void AddToEnd(int data)
@@ -88,8 +89,29 @@ namespace SinglyLinkedList
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Recursive Singly Linked List");
-            Console.WriteLine();
+            WriteLine();
+            WriteLine("Recursive Singly Linked List");
+            WriteLine();
+            WriteLine("Time & Space Complexity - Worst Case");
+            WriteLine();
+            WriteLine("Time Complexity");
+            WriteLine();
+            WriteLine("Search - O(n)");
+            WriteLine();
+            WriteLine("Insert");
+            WriteLine("At Begining/ Head - O(1)");
+            WriteLine("At End/ Tail - O(1)");
+            WriteLine();
+            WriteLine("Remove");
+            WriteLine("At Begining/ Head - O(1)");
+            WriteLine("At End/ Tail - O(n)");
+            WriteLine("At A Position/ in between - O(n)");
+
+            WriteLine();
+
+            WriteLine("Space Complexity - O(n) : for using a call stack for recursive calls.");
+
+            
 
             SinglyLinkedList node = new SinglyLinkedList();
 
