@@ -157,10 +157,10 @@ namespace Doubly_Linked_List
 
         // }
 
-        // public void removeNodeAtPosition(Node node, int position)
-        // {
+        public void RemoveNodeAtPosition(Node node, int position)
+        {
 
-        // }
+        }
 
         // public void removeNodesWithValue(int value)
         // {
@@ -219,7 +219,7 @@ namespace Doubly_Linked_List
             // insertAtPosition(), 
             // O(p) time -- Because we have to traverse all the way to the position |
             // O(1) space
-           // head.next = new Node(200);
+            
             
             WriteLine();
 
@@ -247,14 +247,14 @@ namespace Doubly_Linked_List
            dllist.PrintList(); 
            WriteLine();
 
-           WriteLine($"Removing Head: {dllist.RemoveHeadOrFirst()}");
+           WriteLine($"Removing At Position: {dllist.RemoveNodeAtPosition()}");
            WriteLine();
 
            dllist.PrintList(); 
            WriteLine();
  
-           WriteLine($"Removing Tail: {dllist.RemoveTailOrLast()}");
-           WriteLine();
+        //    WriteLine($"Removing Tail: {dllist.RemoveTailOrLast()}");
+        //    WriteLine();
 
            dllist.PrintList(); 
            WriteLine();
