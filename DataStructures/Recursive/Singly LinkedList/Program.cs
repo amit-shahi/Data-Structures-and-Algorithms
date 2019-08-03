@@ -92,7 +92,8 @@ namespace SinglyLinkedList
                 headNode = headNode.next;
                 return headNode.next; /* Moved head */
             }
-
+        // NOTE: If we just do following comparison, then it won't delete the 1st Node of Singly Linked List
+        
         //    if(node.data == _data)
         //     return headNode.next; /* Moved head */
 
