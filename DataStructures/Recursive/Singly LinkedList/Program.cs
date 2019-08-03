@@ -82,6 +82,25 @@ namespace SinglyLinkedList
                 headNode = temp;
             }
         }
+
+       public Node deleteNode(int _data)
+       {
+           Node node = headNode;
+
+           if(node.data == _data)
+            return headNode.next; /* Moved head */
+
+            while(node.next != null)
+            {
+                if(node.next.data == _data)
+                {
+                    node.next = node.next.next;
+                    return headNode; /* Head didn't change */
+                }
+                node = node.next;
+            }
+         return headNode;
+       } 
     }
 
 
@@ -123,6 +142,14 @@ namespace SinglyLinkedList
             node.AddToBegining(2);
 
             node.AddToEnd(40);
+
+            node.Print();
+
+            node.deleteNode(30);
+
+            WriteLine();
+            WriteLine("After deleting Node 30, LinkedList will be -");
+            WriteLine();
 
             node.Print();
         }
