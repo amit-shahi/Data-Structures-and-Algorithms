@@ -87,8 +87,14 @@ namespace SinglyLinkedList
        {
            Node node = headNode;
 
-           if(node.data == _data)
-            return headNode.next; /* Moved head */
+            if(headNode.data == _data)
+            {    
+                headNode = headNode.next;
+                return headNode.next; /* Moved head */
+            }
+
+        //    if(node.data == _data)
+        //     return headNode.next; /* Moved head */
 
             while(node.next != null)
             {
@@ -145,10 +151,11 @@ namespace SinglyLinkedList
 
             node.Print();
 
-            node.deleteNode(30);
+            int deleteNode = 2;
+            node.deleteNode(deleteNode);
 
             WriteLine();
-            WriteLine("After deleting Node 30, LinkedList will be -");
+            WriteLine($"After deleting Node {deleteNode}, LinkedList will be -");
             WriteLine();
 
             node.Print();
