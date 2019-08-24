@@ -158,7 +158,7 @@ namespace Create_Binary_Search_Tree___O_log_n_
 
             // Given Nodes
             Write("Given Nodes: ");
-            Write("20 2 10 25 60 -1");
+            Write("5 15 22 17 34 7 2 5 1 35 27 16 30 22 17");
 
             WriteLine();
             WriteLine();
@@ -194,7 +194,7 @@ namespace Create_Binary_Search_Tree___O_log_n_
            
            // Find a Node by a value
            int findValue = 27;
-           Write($"Does Node value {findValue} exists? ");
+           Write($"Does Node with value {findValue} exists? ");
            WriteLine($"{(bst.Find(root, findValue)==true?"Yes":"No")}");
 
            WriteLine();
