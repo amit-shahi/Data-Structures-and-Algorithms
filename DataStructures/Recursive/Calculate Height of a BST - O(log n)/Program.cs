@@ -32,19 +32,21 @@ namespace Calculate_Height_of_a_BST___O_log_n_
 
         public int Height(BST node)
         {
-            if(node == null)
-             return 0;
+             if(node == null)
+                return 0;
+
+             if(node.left == null && node.right == null)
+                return 0;
 
             int height = Math.Max(Height(node.left), Height(node.right));
-
-            return height+1;
+                return height+1;
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            WriteLine("Calculate Height of a Tree in O(logn) time");
+            WriteLine("Calculate Height of a Tree in O(log n) time");
             WriteLine();
 
             WriteLine("Inserted Nodes: 20, 30, 10, 40, 60, 5");
