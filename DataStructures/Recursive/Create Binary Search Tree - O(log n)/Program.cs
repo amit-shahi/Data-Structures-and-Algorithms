@@ -30,6 +30,39 @@ namespace Create_Binary_Search_Tree___O_log_n_
 
         }
 
+        public bool Find(BST root, int data) // Contains
+        {
+            if(root == null)
+                return false;
+
+            if(root.data == data)
+                return true;
+
+            else if(data < root.data) // left sub tree traversal
+            {
+                if(root.left == null)
+                    return false;
+                else
+                    return Find(root.left, data);
+            }
+            else if(data > root.data) // right sub tree traversal
+            { 
+                if(root.right == null)
+                    return false;
+                else
+                    return Find(root.right, data);
+            }
+             
+            
+            return false;
+        }
+
+        // TODO
+        // public BST Remove() 
+        // {
+
+        // }
+
 
         // Recursive Traversal
         // https://en.wikipedia.org/wiki/Tree_traversal
@@ -107,15 +140,21 @@ namespace Create_Binary_Search_Tree___O_log_n_
 
             BST bst = new BST();
             
-            root = bst.Insert(root,20);
+            root = bst.Insert(root,5);
+            root = bst.Insert(root,15);
+            root = bst.Insert(root,22);
+            root = bst.Insert(root,17);
+            root = bst.Insert(root,34);
+            root = bst.Insert(root, 7);
             root = bst.Insert(root,2);
-            root = bst.Insert(root,10);
-            root = bst.Insert(root,25);
-            root = bst.Insert(root,60);
-            root = bst.Insert(root, -1);
-            root = bst.Insert(root,125);
-            root = bst.Insert(root,160);
-            root = bst.Insert(root, 11);
+            root = bst.Insert(root,5);
+            root = bst.Insert(root, 1);
+            root = bst.Insert(root, 35);
+            root = bst.Insert(root, 27);
+            root = bst.Insert(root, 16);
+            root = bst.Insert(root, 30);
+            root = bst.Insert(root, 22);
+            root = bst.Insert(root, 17);
 
             // Given Nodes
             Write("Given Nodes: ");
@@ -152,6 +191,16 @@ namespace Create_Binary_Search_Tree___O_log_n_
            WriteLine();
            WriteLine();
 
+           
+           // Find a Node by a value
+           int findValue = 27;
+           Write($"Does Node value {findValue} exists? ");
+           WriteLine($"{(bst.Find(root, findValue)==true?"Yes":"No")}");
+
+           WriteLine();
+           WriteLine();
+
+           // Find Height of a Tree
            WriteLine($"Height of Tree: {bst.Height(root)}");
 
            WriteLine();
